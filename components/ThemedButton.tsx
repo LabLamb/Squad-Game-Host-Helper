@@ -1,5 +1,6 @@
 import { useThemeColor } from '@/hooks/useThemeColor';
-import { Pressable, StyleSheet, Text, TextStyle, ViewStyle, type PressableProps } from 'react-native';
+import { Pressable, StyleSheet, TextStyle, ViewStyle, type PressableProps } from 'react-native';
+import { ThemedText } from './ThemedText';
 
 type ThemedButtonProps = PressableProps & {
   title: string;
@@ -38,7 +39,7 @@ export function ThemedButton({
       disabled={disabled}
       {...props}
     >
-      <Text style={[styles.text, { color }, textStyle]}>{title}</Text>
+      <ThemedText style={[{ color, fontSize: 20 }, textStyle]}>{title}</ThemedText>
     </Pressable>
   );
 }
@@ -50,9 +51,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     width: 300,
-  },
-  text: {
-    fontWeight: '600',
-    fontSize: 16,
   },
 });

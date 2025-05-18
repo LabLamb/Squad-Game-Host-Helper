@@ -35,24 +35,29 @@ const styles = StyleSheet.create({
     lineHeight: 60,
   },
   default: {
+    fontFamily: 'Bender-Bold',
     fontSize: 16,
     lineHeight: 24,
   },
   defaultSemiBold: {
+    fontFamily: 'Bender-Bold',
     fontSize: 16,
     lineHeight: 24,
     fontWeight: '600',
   },
   title: {
+    fontFamily: 'Bender-Bold',
     fontSize: 36,
     fontWeight: 'bold',
     lineHeight: 32,
   },
   subtitle: {
+    fontFamily: 'Bender-Bold',
     fontSize: 28,
     fontWeight: 'bold',
   },
   link: {
+    fontFamily: 'Bender-Bold',
     lineHeight: 30,
     fontSize: 16,
     color: '#0a7ea4',

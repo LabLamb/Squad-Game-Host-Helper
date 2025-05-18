@@ -61,14 +61,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     gap: 16,
-    width: 172,
+    minHeight: 75,
+    aspectRatio: 4,
   },
   button: {
-    paddingHorizontal: 12,
-    paddingVertical: 6,
+    flex: 1,
+    height: '100%',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   value: {
-    minWidth: 32,
+    flex: 1,
     textAlign: 'center',
+    fontSize: 32,
   },
 });

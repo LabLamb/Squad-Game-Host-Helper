@@ -9,11 +9,8 @@ export const Colors = {
     background: '#E2E5C2', // Light camo beige
     surface: '#D6D9B4', // Panel/inner box color
     border: '#9DA786', // Desaturated olive
-    tint: '#C97916', // Burnt orange (highlight/action)
     icon: '#5A5F48',
     tabIconDefault: '#5A5F48',
-    tabIconSelected: '#C97916',
-    button: '#A36D1D', // Darker orange-brown button
     buttonText: '#FDF6E3',
     danger: '#B0303C', // Muted warning red
     success: '#4B8F29', // Tactical green

@@ -1,7 +1,8 @@
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
+import { useGame } from '@/context/GameContext';
 import { useThemeColor } from '@/hooks/useThemeColor';
-import { Href, router } from 'expo-router';
+import { Href, Redirect, router } from 'expo-router';
 import { Pressable, View } from 'react-native';
 
 const GAME_MODES: { name: string; route: Href }[] = [
@@ -28,7 +29,10 @@ const GAME_MODES: { name: string; route: Href }[] = [
 ];
 
 const HomeScreen = () => {
+  const { game } = useGame();
   const backgroundColor = useThemeColor({}, 'surface');
+
+  if (game?.mode === 'classic') return <Redirect href={'/game/classic'} />;
 
   return (
     <ParallaxScrollView

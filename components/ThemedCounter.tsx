@@ -11,9 +11,10 @@ type ThemedCounterProps = {
   style?: StyleProp<ViewStyle>;
   buttonStyle?: StyleProp<ViewStyle>;
   textStyle?: StyleProp<TextStyle>;
+  disabled?: boolean;
 };
 
-export default function ThemedCounter({
+export function ThemedCounter({
   value = 0,
   onChange,
   min = 0,
@@ -21,6 +22,7 @@ export default function ThemedCounter({
   style,
   buttonStyle,
   textStyle,
+  disabled,
 }: ThemedCounterProps) {
   const [count, setCount] = useState(value);
   const bgColor = useThemeColor({}, 'surface');
